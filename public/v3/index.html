@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Born Robot Song Generator v3</title>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.4/dist/tf.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/webmidi"></script>
+
+  	<script src="song.js" type="text/javascript"></script>
+
+  	<!-- <script src="song-generator-arcade.js" type="text/javascript"></script>-->
+  	<script src="song-generator-brightonian.js" type="text/javascript"></script>
+
+  	<script src="musical-pattern.js" type="text/javascript"></script>
+  	<script src="music-note.js" type="text/javascript"></script>
+  	<script src="simple-1d-noise.js" type="text/javascript"></script>
+  </head>
+  <body>
+
+    <script src="app.js"></script>
+
+<h1>Born Robot Studio V3</h1>
+<a href="/index.html">Back to index</a>
+
+<p>The band members:</p>
+<ul id="musicians"></ul>
+
+<p>Fixed song components:</p>
+<ul id="songparams">
+</ul>
+
+<p>Musical idea:</p>
+<code style="font-weight:bold;" id="span-musicalIdea">...create a melody idea</code>
+
+<p>The song:</p> 
+<code id="span-song" style="font-weight:bold;">...create the song first!</code>
+
+<form action="">
+
+<p>
+  Choose MIDI device:
+  <span id="midiOuts" />
+</p>
+
+<p>
+  Choose output datastore:  <br/>
+  <input type="radio" name="datastore" value="file://nothing.wav"> None<br/>
+  <input type="radio" name="datastore" value="https://library.bornrobot.com"> library.bornrobot.com<br>
+</p>
+<p>
+  Enter number of songs to generate:  
+  <input type="text" name="numberOfSongs" value="10" />
+</p>
+</form>
+
+<p>
+  <button onclick="generateSongs()">Start session</button>
+</p>
+
+<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+<script src="record.js"></script>
+    
+</body>
+</html>
